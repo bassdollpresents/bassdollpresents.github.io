@@ -50,6 +50,7 @@ const BodyWrapper = styled.div`
   background: url('bg.png') no-repeat;
   background-size: cover;
   background-position: bottom;
+  background-color: black;
   display: flex;
   overflow: visible;
   min-height: 0;
@@ -59,7 +60,10 @@ const BodyInterior = styled.div`
   max-height: inherit;
   overflow-y: scroll;
   text-align: center;
-  margin: 50px 10%;
+  margin: 50px 20%;
+  @media screen and (max-width: 500px){
+    margin: 20px 10%;
+  }
 `;
 
 class Body extends Component {
