@@ -6,9 +6,6 @@
   bottom: 0;
   display: flex;
   flex-flow: column nowrap;
-}
-
-p {
   color: whitesmoke;
 }
 
