@@ -9,12 +9,18 @@
   color: whitesmoke;
 }
 
-.react-h5-audio-player > div {
-  background-color: black !important;
+h2 {
+  font-family: 'UnifrakturMaguntia', cursive;
 }
 
-.audio-info .time span {
-  color: white !important;
+.react-h5-audio-player > div {
+  background-color: black !important;
+  height: 55px !important;
+  padding: 5px 0px 2px !important;
+}
+
+.progress-bar-wrapper {
+  display: none !important;
 }
 
 .toggle-play-button {
