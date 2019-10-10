@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import AudioPlayer from 'react-h5-audio-player';
 
 import './App.css';
 
@@ -21,7 +22,11 @@ class App extends Component {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </Body>
         <MusicBar>
-        music bar goes here
+          <AudioPlayer 
+            autoPlay
+            loop
+            src={'music.mp3'}
+          />
         </MusicBar>
       </React.Fragment>
     );
@@ -79,6 +84,6 @@ class Body extends Component {
 }
 
 const MusicBar = styled.div`
-  height: 50px;
+  height: 70px;
   background-color: black;
 `;

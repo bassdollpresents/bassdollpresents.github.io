@@ -11,3 +11,19 @@
 p {
   color: whitesmoke;
 }
+
+.react-h5-audio-player > div {
+  background-color: black !important;
+}
+
+.audio-info .time span {
+  color: white !important;
+}
+
+.toggle-play-button {
+  background-color: grey !important;
+}
+
+.toggle-play-button .pause-icon {
+  box-shadow: grey 7px 0px 0px 0px inset !important;
+}
