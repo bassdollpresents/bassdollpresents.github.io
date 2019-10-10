@@ -1,1 +1,1 @@
-#### (c) 2019 [Syd Strzempko](stzuko.github.io)
+#### (c) 2019 [Syd Strzempko](https://stzuko.github.io)
