@@ -77,15 +77,16 @@ const BodyInterior = styled.div`
   text-align: center;
   margin: 0px 20%;
   background-color: rgba(0,0,0,.5);
-  padding: 10px 5px;
+  padding: 10px 40px;
   line-height: 200%;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
   ::-webkit-scrollbar { /* WebKit */
   width: 0px;
   }
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 670px){
     margin: 0px 10%;
+    padding: 5px 10px;
   }
 `;
 
