@@ -5,15 +5,23 @@ import AudioPlayer from 'react-h5-audio-player';
 import './App.css';
 
 class App extends Component {
+
+  state = { autoPlay: false }
+
+  componentDidMount() {
+    this.setState({autoPlay : true});
+  }
+
   render() {
+    const { autoPlay } = this.state;
     return (
       <React.Fragment>
         <Header>
           <h2>b a s s d o l l</h2>
           <div>
-            <Icon src='axe_white.png' alt='music' />
-            <Icon src='book_white.png' alt='writing' />
-            <Icon src='swords_white.png' alt='social media' />
+            <Icon src='axe_white.png' alt='music' href='/music' />
+            <Icon src='book_white.png' alt='writing' href='/writing' />
+            <Icon src='swords_white.png' alt='social media' href='/media' />
           </div>
         </Header>
         <Body>
@@ -31,7 +39,7 @@ class App extends Component {
         </Body>
         <MusicBar>
           <AudioPlayer 
-            autoPlay={true}
+            autoPlay={autoPlay}
             loop={true}
             src={'music.mp3'}
           />
