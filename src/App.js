@@ -10,6 +10,11 @@ class App extends Component {
       <React.Fragment>
         <Header>
           <h2>b a s s d o l l</h2>
+          <div>
+            <Icon src='axe_white.png' alt='music' />
+            <Icon src='book_white.png' alt='writing' />
+            <Icon src='swords_white.png' alt='social media' />
+          </div>
         </Header>
         <Body>
         <h2>Title Heading</h2>
@@ -26,11 +31,10 @@ class App extends Component {
         </Body>
         <MusicBar>
           <AudioPlayer 
-            autoPlay
-            loop
+            autoPlay={true}
+            loop={true}
             src={'music.mp3'}
           />
-          Song Title
         </MusicBar>
       </React.Fragment>
     );
@@ -107,5 +111,23 @@ const MusicBar = styled.div`
   text-align: center;
   background-color: black;
   font-size: .5em;
-  padding-bottom: 5px;
+  // padding-bottom: 5px;
 `;
+
+const Box = styled.a`
+  padding: 10px;
+  img {
+    height: 30px;
+    width: 30px;
+  }
+`;
+
+class Icon extends Component {
+  render() {
+    return (
+      <Box href={this.props.href}>
+        <img src={this.props.src} alt={this.props.alt}/>
+      </Box>
+    );
+  }
+}
