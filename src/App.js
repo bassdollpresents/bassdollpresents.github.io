@@ -1,20 +1,53 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import AudioPlayer from 'react-h5-audio-player';
+import ReactPlayer from 'react-player'
 
 import './App.css';
 
 class App extends Component {
 
-  state = { autoPlay: true }
+  state = {
+    play: true
+  }
 
-  componentDidMount() {
-    this.setState({autoPlay : true});
-    console.log("Set");
+  togglePlay = () => {
+    this.setState({play: !this.state.play});
+  }
+
+  isChrome() {
+    // please note, 
+    // that IE11 now returns undefined again for window.chrome
+    // and new Opera 30 outputs true for window.chrome
+    // but needs to check if window.opr is not undefined
+    // and new IE Edge outputs to true now for window.chrome
+    // and if not iOS Chrome check
+    // so use the below updated condition
+    var isChromium = window.chrome;
+    var winNav = window.navigator;
+    var vendorName = winNav.vendor;
+    var isOpera = typeof window.opr !== "undefined";
+    var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+    var isIOSChrome = winNav.userAgent.match("CriOS");
+
+    if (isIOSChrome) {
+      // is Google Chrome on IOS
+      return true;
+    } else if(
+      isChromium !== null &&
+      typeof isChromium !== "undefined" &&
+      vendorName === "Google Inc." &&
+      isOpera === false &&
+      isIEedge === false
+    ) {
+      // is Google Chrome
+      return true;
+    } else { 
+      // not Google Chrome 
+      return false;
+    }
   }
 
   render() {
-    const { autoPlay } = this.state;
     return (
       <React.Fragment>
         <Header>
@@ -29,17 +62,17 @@ class App extends Component {
           <Br />
           <i>
           Immortal born not of god, but by the hand of man
-          <Br />
+          <Br2 />
           You are the weapon wielded
-          <Br />
+          <Br2 />
           Hollow vessel for our fear and jealousy
-          <Br />
+          <Br2 />
           Our Longing and desire.
-          <Br />
+          <Br2 />
           The wailing curse of the misshapen, abandoned by time
-          <Br />
+          <Br2 />
           Be our blade
-          <Br />
+          <Br2 />
           Against those who cling to life eternal.
           </i>
           <Br />
@@ -78,12 +111,9 @@ class App extends Component {
           </i>
           <Br />
         </Body>
-        <MusicBar>
-          <AudioPlayer 
-            autoPlay={autoPlay}
-            loop={true}
-            src={'twdwo.wav'}
-          />
+        <MusicBar id='MusicBar'>
+          <ReactPlayer url='https://soundcloud.com/stzuko/twdwo' playing={this.state.play} mute={this.isChrome()} />
+          <div className='show' onClick={this.togglePlay}>{this.state.play ? 'pause' : 'play'}</div>
         </MusicBar>
       </React.Fragment>
     );
@@ -94,7 +124,12 @@ export default App;
 
 const Br = styled.div`
   width: 100%;
-  height: 50px;
+  height: 40px;
+`;
+
+const Br2 = styled.div`
+  width: 100%;
+  height: 10px;
 `;
 
 const HeaderWrapper = styled.div`
@@ -161,6 +196,7 @@ class Body extends Component {
 }
 
 const MusicBar = styled.div`
+  z-index: 200;
   height: 70px;
   text-align: center;
   background-color: black;
