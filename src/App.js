@@ -56,7 +56,9 @@ class App extends Component {
     return (
       <Router>
         <Header>
-          <h2>b a s s d o l l</h2>
+          <h2>
+            <Link to='/'>b a s s d o l l</Link>
+          </h2>
           <div className="row-flex">
             <Icon src='axe_white.png' alt='music' href='/music' />
             <Icon src='book_white.png' alt='writing' href='/writing' />
@@ -65,18 +67,21 @@ class App extends Component {
         </Header>
         <Body>
           <Switch>
-          <Route path="/">
-            <Story />
-          </Route>
-          <Route path="/music">
-            <Music />
-          </Route>
-          <Route path="/writing">
-            <Writing />
-          </Route>
-          <Route path="/media">
-            <Media />
-          </Route>
+            <Route exact path="/">
+              <Story />
+            </Route>
+            <Route path="/music">
+              <Music />
+            </Route>
+            <Route path="/writing/ensorcelled">
+              <Story />
+            </Route>
+            <Route path="/writing">
+              <Writing />
+            </Route>
+            <Route path="/media">
+              <Media />
+            </Route>
           </Switch>
         </Body>
         <MusicBar id='MusicBar'>
@@ -123,6 +128,7 @@ class Header extends Component {
 
 const BodyWrapper = styled.div`
   flex-grow: 1;
+  flex-flow: column nowrap;
   background: url('bg.png') no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -130,10 +136,11 @@ const BodyWrapper = styled.div`
   display: flex;
   overflow: visible;
   min-height: 0;
+  height: 100%;
 `;
 
 const BodyInterior = styled.div`
-  max-height: inherit;
+  height: inherit;
   overflow-y: scroll;
   text-align: center;
   margin: 0px 20%;
@@ -255,7 +262,10 @@ class Story extends Component {
 class Music extends Component {
   render() {
     return (
-      <div>HI</div>
+      <React.Fragment>
+        <Br2 />
+        <i><a href="https://bassdoll.bandcamp.com/">Bandcamp</a></i>
+      </React.Fragment>
     )
   }
 }
@@ -263,7 +273,10 @@ class Music extends Component {
 class Writing extends Component {
   render() {
     return (
-      <div>HI</div>
+      <React.Fragment>
+        <Br2 />
+        <Link to="/writing/ensorcelled"><i>Ensorcelled</i></Link>
+      </React.Fragment>
     )
   }
 }
@@ -271,7 +284,12 @@ class Writing extends Component {
 class Media extends Component {
   render() {
     return (
-      <div>HI</div>
+      <React.Fragment>
+        <Br2 />
+        <i><a href="https://www.instagram.com/bass.doll/">Instagram</a></i>
+        <Br2 />
+        <i><a href="https://www.facebook.com/GwenEverrr">Facebook</a></i>
+      </React.Fragment>
     )
   }
 }
