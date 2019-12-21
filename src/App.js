@@ -226,7 +226,7 @@ class Story extends Component {
       <React.Fragment>
         <Br />
         <i>
-        Immortal born not of god, but by the hand of man
+        "Immortal born not of god, but by the hand of man
         <Br2 />
         You are the weapon wielded
         <Br2 />
@@ -238,7 +238,7 @@ class Story extends Component {
         <Br2 />
         Be our blade
         <Br2 />
-        Against those who cling to life eternal.
+        Against those who cling to life eternal."
         </i>
         <Br />
         The spires of the ancient metropolis loomed above her as she strode forward, cutting a swath through the mist. Between its crumbling archways and sinking roofs, the biting wind hurried dust in shimmering curtains, biting away at the cities’ flesh. Her prey was here—somewhere—living out his borrowed time. The Lichslayer’s Axe weighed heavily on her sturdy shoulder, chattering quietly in anticipation.
@@ -249,7 +249,7 @@ class Story extends Component {
         <Br />
         The heavy, dead air of the ruin suddenly filled with the crackling ozone of magic. Motes of energy hovered in the air, and as if in menacing response to her encroachment, from beneath the dust, long dead corpses rose from the ground. Nearby, hanging from long-abandoned gallows, the corpse of a man raised his arm and pointed a finger of doom at the lone warrior. She fought, black axe cleaving and hacking against their desecrated forms, every moment spent in motion, her eyes procedurally scanning every roof and alley for her target. 
         <Br />
-        In a flash of sallow blue light, he revealed himself a staff of iron clutched in his hand, sending starry projectiles hurtling at the battling doll. The first volley, she dodged, but the second, soars toward her in mid-air. A second too late, she raised the axe in defense, and the impact flung her against the lip of the fountain. Cracks arcing like spiderwebs on her back, she stood. The mouth of The axe spoke in its hollow tone, Do not falter, vessel—He shall taste the doom that awaits him.  As he raised his arms to cast a spell, the doll leveled the axe, reflecting grey sunlight off its blade. He stopped cold, fear crossing his undead visage. She walked towards him, the undead thralls around them paralyzed without their masters command. 
+        In a flash of sallow blue light, he revealed himself a staff of iron clutched in his hand, sending starry projectiles hurtling at the battling doll. The first volley, she dodged, but the second, soars toward her in mid-air. A second too late, she raised the axe in defense, and the impact flung her against the lip of the fountain. Cracks arcing like spiderwebs on her back, she stood. The mouth of The axe spoke in its hollow tone, "<i>Do not falter, vessel—He shall taste the doom that awaits him.</i>"  As he raised his arms to cast a spell, the doll leveled the axe, reflecting grey sunlight off its blade. He stopped cold, fear crossing his undead visage. She walked towards him, the undead thralls around them paralyzed without their masters command. 
         <Br />
         With his magic in check, he was nothing but a wrinkled bag of bones. As if walking in a thick miasma, he turned, and fled in terror into the church. As she followed, her steps echoed a funeral dirge, and as he stumbled to the floor, he cast a last desperate look to the defaced idol on the dais, his undead will trembling in question. With a sickening crunch, the heavy blade of the axe sunk into his skull, and it was over as quickly as it began. His will to live severed, the atonal buzz of electricity dissipated, the magic he had summoned returning to whence it came.
         <Br />
@@ -272,7 +272,7 @@ class Story extends Component {
         The memory shattered, and doll awoke back in the ruined city, its spires now strangely familiar to her, even in their disrepair.She looked down at The Axe as if seeing it for the first time, the chatter of its bronze teeth ringing in her ears as it spoke:
         <Br />
         <i>
-        You’ve seen its visage, and yet lived, yet another triumph a being of flesh could not achieve. You are made well indeed, and now you know our destination. We will walk through time immaterial, and we will slay their god.
+        "You’ve seen its visage, and yet lived, yet another triumph a being of flesh could not achieve. You are made well indeed, and now you know our destination. We will walk through time immaterial, and we will slay their god."
         </i>
         <Br />
       </React.Fragment>
