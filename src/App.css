@@ -21,14 +21,6 @@ h2 {
   padding: 10px;
 }
 
-.row-flex {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
   color: white;

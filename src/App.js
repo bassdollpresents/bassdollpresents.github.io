@@ -56,14 +56,14 @@ class App extends Component {
     return (
       <Router>
         <Header>
-          <h2>
-            <Link to='/'>b a s s d o l l</Link>
-          </h2>
-          <div className="row-flex">
+          <Link to='/'>
+            <HeaderImage src='headerimage.png' alt='Bassdoll Presents Ensorcelled' />
+          </Link>
+          <LinkMenu className="row-flex">
             <Icon src='axe_white.png' alt='music' href='/music' />
             <Icon src='book_white.png' alt='writing' href='/writing' />
-            <Icon src='swords_white.png' alt='social media' href='/media' />
-          </div>
+            <Icon src='swords_white.png' alt='socials' href='/media' />
+          </LinkMenu>
         </Header>
         <Body>
           <Switch>
@@ -105,6 +105,13 @@ const Br2 = styled.div`
   height: 10px;
 `;
 
+const HeaderImage = styled.img`
+  max-width: 50%;
+  @media screen and (max-width: 670px){
+    max-width: 100%;
+  }
+`;
+
 const HeaderWrapper = styled.div`
   padding: 10px;
   text-align: center;
@@ -125,6 +132,14 @@ class Header extends Component {
     );
   }
 }
+
+const LinkMenu = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+`;
 
 const BodyWrapper = styled.div`
   flex-grow: 1;
@@ -180,11 +195,16 @@ const MusicBar = styled.div`
 `;
 
 const IconBox = styled.div`
-  padding: 10px;
+  padding: 5px;
   img {
     height: 30px;
     width: 30px;
   }
+`;
+
+const IconCaption = styled.div`
+  text-align: center;
+  font-size: 8px;
 `;
 
 class Icon extends Component {
@@ -193,6 +213,7 @@ class Icon extends Component {
       <Link to={this.props.href}>
         <IconBox>
           <img src={this.props.src} alt={this.props.alt}/>
+          <IconCaption>{this.props.alt}</IconCaption>
         </IconBox>
       </Link>
     );
